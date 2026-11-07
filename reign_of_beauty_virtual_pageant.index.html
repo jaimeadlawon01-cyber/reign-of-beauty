@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reign of Beauty — The Virtual Pageant. A celebration of grace, confidence, creativity, and purpose.">
+<title>Reign of Beauty | The Virtual Pageant</title>
+<style>
+:root{--wine:#2c1d1a;--wine2:#422626;--gold:#ad874b;--cream:#faf7f0;--paper:#fffdf8;--muted:#76685b;--line:#e9dfcf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:#34251f;font-family:Georgia,serif}
+header{height:auto;min-height:76px;padding:16px 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:12px}.crown{font-size:35px;color:var(--gold)}.brand-name{font-size:15px;letter-spacing:3px;font-weight:bold}.brand-sub{font:9px Arial,sans-serif;letter-spacing:3px;color:var(--gold);margin-top:5px}
+nav{display:flex;gap:25px}nav a{font:10px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#55443a;text-decoration:none}nav a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:0;font-size:25px;color:var(--wine)}
+.hero{padding:105px 20px 90px;text-align:center;color:#fff9ed;background:linear-gradient(120deg,rgba(39,23,23,.96),rgba(59,32,32,.91)),radial-gradient(circle at 75% 30%,#99734b,#241616)}
+.eyebrow{font:10px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}.hero h1{font-size:clamp(48px,9vw,86px);line-height:1.05;letter-spacing:2px;margin:25px 0}.italic{font-style:italic;color:#c6a56f}.rule{height:1px;width:65px;background:var(--gold);margin:25px auto}.hero .tagline{font-size:20px;line-height:1.6;font-style:italic;color:#e9dac3}.hero .sub{font:10px Arial,sans-serif;letter-spacing:4px;margin-top:30px;color:#d7c5aa}
+.btn{display:inline-block;background:var(--gold);color:white;padding:14px 23px;text-decoration:none;border:1px solid var(--gold);font:600 10px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-top:28px;cursor:pointer}.btn:hover{background:#8b693b}
+section{padding:72px 7%;text-align:center}.section-title{font-size:clamp(29px,4vw,40px);font-weight:normal;margin:12px 0}.intro{max-width:720px;margin:22px auto 0;font:14px/1.9 Arial,sans-serif;color:var(--muted)}.ornament{font-size:25px;color:var(--gold);margin-top:25px}
+.categories{background:#eee6d9}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px;margin:38px auto 0;text-align:left}.card{background:var(--paper);border:1px solid var(--line);padding:25px 21px;min-height:205px}.card .symbol{font-size:27px;color:var(--gold)}.card h3{font-size:21px;font-weight:normal;margin:17px 0 10px}.card p{font:12px/1.7 Arial,sans-serif;color:var(--muted);margin:0}
+.journey{max-width:850px;margin:38px auto 0;text-align:left}.step{display:flex;gap:22px;align-items:center;margin:24px 0}.number{font-size:36px;color:var(--gold)}.step h3{font-size:20px;font-weight:normal;margin:0 0 6px}.step p{font:12px/1.6 Arial,sans-serif;color:var(--muted);margin:0}
+.cta{background:linear-gradient(120deg,#271717,#422626);color:#fff9ed}.cta p{font:13px/1.7 Arial,sans-serif;color:#e4d4bd;max-width:550px;margin:15px auto}
+footer{text-align:center;padding:38px 15px;background:var(--wine);color:#e8d9c1}.footer-title{letter-spacing:3px;font-size:14px}.footer-sub{font:9px Arial,sans-serif;letter-spacing:2px;margin-top:8px}.footer-line{height:1px;width:45px;background:var(--gold);margin:20px auto}.footer-quote{font-style:italic;font-size:14px}
+#register{background:var(--paper);display:none}form{max-width:560px;margin:30px auto;text-align:left}label{display:block;font:10px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;margin:15px 0 7px}input,textarea{width:100%;padding:13px;border:1px solid #d9cbb8;background:#fffdf8;font:13px Arial,sans-serif;color:#34251f}textarea{min-height:90px;resize:vertical}.check{display:flex;gap:9px;align-items:flex-start;font:12px/1.5 Arial,sans-serif;text-transform:none;letter-spacing:0}.check input{width:auto;margin-top:2px}.notice{font:11px/1.6 Arial,sans-serif;color:var(--muted)}#success{display:none;text-align:center;padding:30px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){header{padding:13px 5%}nav{display:none;position:absolute;top:70px;right:5%;background:var(--paper);padding:20px;box-shadow:0 8px 24px #0002;flex-direction:column;gap:18px}nav.open{display:flex}.menu{display:block}.hero{padding:85px 18px 75px}section{padding:58px 6%}.grid{grid-template-columns:1fr 1fr;gap:10px}.card{padding:18px 14px;min-height:195px}.card h3{font-size:18px}.card p{font-size:11px}}
+@media(max-width:360px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="crown">♛</div><div><div class="brand-name">REIGN OF BEAUTY</div><div class="brand-sub">THE VIRTUAL PAGEANT</div></div></div>
+  <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+  <nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#categories">Categories</a><a href="#journey">The Journey</a><a href="#register" id="nav-register">Join Us</a></nav>
+</header>
+<main id="home">
+  <section class="hero">
+    <div class="eyebrow">A CELEBRATION OF GRACE &amp; PURPOSE</div>
+    <h1>REIGN <span class="italic">of</span><br>BEAUTY</h1>
+    <div class="rule"></div>
+    <div class="tagline">Where beauty meets purpose,<br>and every voice deserves to shine.</div>
+    <div class="sub">THE VIRTUAL PAGEANT</div>
+    <a class="btn" href="#register">Become a Candidate ↗</a>
+    <div class="ornament">❧</div>
+  </section>
+  <section id="about">
+    <div class="eyebrow">OUR STORY</div><h2 class="section-title">More Than Just a Crown</h2>
+    <p class="intro">Reign of Beauty is a virtual pageant that celebrates confidence, creativity, intelligence, individuality, and meaningful advocacy. It is a platform where aspiring candidates can express themselves, share their voices, and create unforgettable moments.</p>
+    <div class="ornament">♛</div><p class="italic">Your voice. Your purpose. Your reign.</p>
+  </section>
+  <section class="categories" id="categories">
+    <div class="eyebrow">THE COMPETITION</div><h2 class="section-title">The Four Categories</h2>
+    <p class="intro">Every category is an opportunity to shine.</p>
+    <div class="grid">
+      <article class="card"><div class="symbol">✧</div><h3>Photogenic</h3><p>Showcase your personality and confidence through a photograph.</p></article>
+      <article class="card"><div class="symbol">♡</div><h3>People's Choice</h3><p>Gain support from the audience and let your supporters help you shine.</p></article>
+      <article class="card"><div class="symbol">❧</div><h3>Advocacy</h3><p>Share a cause that matters to you and inspire positive change.</p></article>
+      <article class="card"><div class="symbol">✦</div><h3>Question &amp; Answer</h3><p>Share your thoughts, values, and perspectives with confidence.</p></article>
+    </div>
+  </section>
+  <section id="journey">
+    <div class="eyebrow">THE EXPERIENCE</div><h2 class="section-title">Your Journey Begins Here</h2>
+    <div class="journey">
+      <div class="step"><div class="number">01</div><div><h3>Registration</h3><p>Submit your application and introduce yourself.</p></div></div>
+      <div class="step"><div class="number">02</div><div><h3>Competition</h3><p>Participate in the official pageant categories.</p></div></div>
+      <div class="step"><div class="number">03</div><div><h3>The Coronation</h3><p>Celebrate the candidates and discover the titleholders.</p></div></div>
+    </div>
+  </section>
+  <section class="cta">
+    <div class="eyebrow">THE CROWN AWAITS</div><h2 class="section-title">Ready to Begin Your Reign?</h2>
+    <p>Take your place, share your story, and let your purpose shine.</p>
+    <a class="btn" href="#register">Register Now</a>
+  </section>
+</main>
+<section id="register">
+  <div class="eyebrow">OFFICIAL APPLICATION</div><h2 class="section-title">Candidate Registration</h2>
+  <p class="intro">Complete the details below to express your interest in joining Reign of Beauty.</p>
+  <form id="application">
+    <label for="name">Full name</label><input id="name" name="name" required placeholder="Your complete name">
+    <label for="age">Age</label><input id="age" name="age" type="number" min="15" max="19" required placeholder="15–19">
+    <label for="location">City / Province</label><input id="location" name="location" required placeholder="Your location">
+    <label for="email">Contact email</label><input id="email" name="email" type="email" required placeholder="you@example.com">
+    <label for="intro">Short introduction</label><textarea id="intro" name="introduction" required placeholder="Tell us a little about yourself..."></textarea>
+    <label for="advocacy">Your chosen advocacy</label><textarea id="advocacy" name="advocacy" required placeholder="What cause do you want to promote?"></textarea>
+    <label class="check"><input type="checkbox" required><span>I confirm that the information provided is accurate and I understand that this is a virtual pageant.</span></label>
+    <button class="btn" type="submit">Submit Application</button>
+    <p class="notice">Demo form only: this downloaded website does not send or store applications. Connect a form service or backend before publishing and collecting candidate information.</p>
+  </form>
+  <div id="success"><div class="crown">♛</div><h2 class="section-title">Thank You!</h2><p class="intro">Your demo application has been completed. No information was sent.</p></div>
+</section>
+<footer><div class="crown">♛</div><div class="footer-title">REIGN OF BEAUTY</div><div class="footer-sub">THE VIRTUAL PAGEANT</div><div class="footer-line"></div><div class="footer-quote">“Every crown begins with a purpose.”</div><p class="notice" style="color:#bcae9e;margin-top:25px">© 2026 REIGN OF BEAUTY. ALL RIGHTS RESERVED.</p></footer>
+<script>
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.querySelectorAll('a[href="#register"]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('register').style.display='block'}));
+document.getElementById('application').addEventListener('submit',e=>{e.preventDefault();document.getElementById('application').style.display='none';document.getElementById('success').style.display='block'});
+</script>
+</body>
+</html>
